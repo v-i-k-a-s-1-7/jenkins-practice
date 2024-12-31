@@ -9,8 +9,9 @@ pipeline {
         }
         stage('clone') {
             steps {
-                sh 'git clone https://github.com/v-i-k-a-s-1-7/jenkins-practice.git'
-            }
+                echo "This stage pulls code from my git repository"
+                git url: "https://github.com/v-i-k-a-s-1-7/jenkins-practice.git", branch: "main"
+                echo "Cloning successful"            }
         }
     }
 }
